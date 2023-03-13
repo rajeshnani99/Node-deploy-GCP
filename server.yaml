@@ -1,0 +1,8 @@
+# @format
+
+runtime: nodejs16
+service: node-api
+
+handlers:
+  - url: /.*
+    script: auto
