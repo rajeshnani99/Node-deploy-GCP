@@ -15,6 +15,22 @@ mongoose
 	})
 	.catch((err) => console.log(err));
 
+const data = {
+	getAllBrands: "/getallbrands",
+	brandByID: " /getallbrands/:id",
+	addBrands: "/addbrands",
+	toDeleteBrands: "/deleteBrand/:id",
+};
+
+app.get("/", (req, res) => {
+	res.send(
+		`API Deployed successfully 	
+${JSON.stringify(data)}
+	** use postman to add , delete brands
+	`
+	);
+});
+
 app.get("/getallbrands", async (req, res) => {
 	try {
 		const alldata = await BrandName.find();
